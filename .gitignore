@@ -5,3 +5,7 @@
 HelloFacebookSample/HelloFacebookSample/bin/*
 
 HelloFacebookSample/HelloFacebookSample/obj/*
+
+*.a
+
+binding/facebook-ios-sdk/
