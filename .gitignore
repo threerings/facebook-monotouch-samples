@@ -1,6 +1,7 @@
+*.DS_Store
 
-HelloFacebookSample/HelloFacebookSample/.DS_Store
+*.userprefs
 
-HelloFacebookSample/.DS_Store
+HelloFacebookSample/HelloFacebookSample/bin/*
 
-binding/.DS_Store
+HelloFacebookSample/HelloFacebookSample/obj/*
