@@ -63,6 +63,12 @@ namespace MonoTouch.FacebookConnect  {
 		[Export ("reauthorizeWithPermissions:behavior:completionHandler:")]
 		void Reauthorize ([NullAllowed]string [] permissions, FBSessionLoginBehavior behavior, FBSessionReauthorizeResultHandler handler);
 		
+		[Export ("reauthorizeWithReadPermissions:behavior:completionHandler:")]
+		void ReauthorizeForRead ([NullAllowed]string [] permissions, FBSessionLoginBehavior behavior, FBSessionReauthorizeResultHandler handler);
+		
+		[Export ("reauthorizeWithPublishPermissions:behavior:completionHandler:")]
+		void ReauthorizeForPublish ([NullAllowed]string [] permissions, FBSessionLoginBehavior behavior, FBSessionReauthorizeResultHandler handler);
+		
 		[Export ("handleOpenURL:")]
 		bool HandleOpenUrl (NSUrl url);
 		
@@ -73,6 +79,14 @@ namespace MonoTouch.FacebookConnect  {
 		[Static]
 		[Export ("openActiveSessionWithPermissions:allowLoginUI:completionHandler:")]
 		bool OpenActiveSession([NullAllowed]string [] permissions, bool allowLoginUI, FBSessionStateHandler handler);
+
+		[Static]
+		[Export ("openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:")]
+		bool OpenActiveSessionForRead([NullAllowed]string [] permissions, bool allowLoginUI, FBSessionStateHandler handler);
+
+		[Static]
+		[Export ("openActiveSessionWithPublishPermissions:allowLoginUI:completionHandler:")]
+		bool OpenActiveSessionForPublish([NullAllowed]string [] permissions, bool allowLoginUI, FBSessionStateHandler handler);
 		
 		// TODO: Can activeSession, setActiveSession: be merged into a get/set property?
 		[Static]
